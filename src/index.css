@@ -18,26 +18,45 @@ h3,
 h4,
 h5,
 h6 {
-    color: rgb(138, 45, 224);
+    color: white;
     font-weight: 700;
-    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem 0 2rem 0;
+}
+
+p,
+input {
+    margin: 1rem 0;
+}
+
+textarea {
+    background-color: rgb(4, 218, 4);
+    border-radius: 5px;
+    font-family: 'Space Mono', serif;
+    font-style: italic;
+    color: black;
+    width: 70%;
+    min-width: 300px;
+    height: 100px;
+    padding: 1rem;
 }
 
 button {
     background-color: rgb(138, 45, 224);
     border-radius: 5px;
+    font-family: 'Space Mono', serif;
     color: white;
+    padding: 0.5rem;
 }
 
 button:hover {
     border: 1px solid rgb(4, 218, 4);
 }
 
-input {
-    background-color: rgb(4, 218, 4);
-    border: none;
-    border-radius: 5px;
-    font-family: 'Space Mono', serif;
-    font-style: italic;
-    color: black;
+.wrapper {
+    width: 70vw;
+    margin: 0 auto;
 }

@@ -5,9 +5,11 @@ import QuestionListContextProvider from "./store/question-list-context";
 function App() {
   return (
     <QuestionListContextProvider>
-      <h1>&#x1f916; AI Q&A</h1>
-      <Form />
-      <QuestionList />
+      <div className="wrapper">
+        <h1>&#x1f916;AI Q&A</h1>
+        <Form />
+        <QuestionList />
+      </div>
     </QuestionListContextProvider>
   );
 }

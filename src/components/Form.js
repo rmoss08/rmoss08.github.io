@@ -57,9 +57,10 @@ const Form = () => {
         Ever had a question for AI? Now is your chance to ask! Enter your
         question below.
       </label>
-      <input
-        type="text"
+      <textarea
         id="question-input"
+        rows='5'
+        columns='40'
         placeholder="Do androids dream of electric sheep?"
       />
       <button>Ask</button>
