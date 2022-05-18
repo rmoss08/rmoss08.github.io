@@ -38,7 +38,7 @@ const Form = () => {
     const prompt = event.target[0].value;
     const timeStamp = event.timeStamp;
     
-    const responseData = fetchOpenaiAPI(prompt);
+    const responseData = await fetchOpenaiAPI(prompt);
     const answer = responseData.choices[0].text;
     const answerFormatted = answer.trim().replace('?', "");
 
