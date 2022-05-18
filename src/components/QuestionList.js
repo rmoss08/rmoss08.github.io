@@ -29,8 +29,19 @@ const QuestionList = () => {
     />
   ));
 
+  let paragraphComponent;
+
+  if (sortedQuestionList.length > 0) {
+    paragraphComponent = <p>Regret asking that? Simply click to remove &#128578;</p>;
+  }
+
   return (
-    <ul className={`border-radius-15 ${styles.list}`}>{questionComponents}</ul>
+    <Fragment>
+      <ul className={`border-radius-15 ${styles.list}`}>
+        {questionComponents}
+      </ul>
+      {paragraphComponent}
+    </Fragment>
   );
 };
 
