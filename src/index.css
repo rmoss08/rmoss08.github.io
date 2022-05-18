@@ -27,19 +27,15 @@ h1 {
     margin: 1rem 0 2rem 0;
 }
 
-label,
 textarea {
-    margin: 0.5rem 0;
-}
-
-textarea {
+    display: block;
     background-color: white;
-    font-family: 'Space Mono', serif;
     color: black;
     width: 100%;
     min-width: 300px;
-    height: 100px;
+    height: 5rem;
     padding: 1rem;
+    margin-top: 0.5rem;
 }
 
 textarea::placeholder {
@@ -48,8 +44,6 @@ textarea::placeholder {
 
 select {
     display: block;
-    border-radius: 10px;
-    font-family: 'Space Mono', serif;
     width: 100%;
     min-height: 2rem;
     padding: 0.5rem;
@@ -59,8 +53,6 @@ select {
 button {
     background-color: rgb(138, 45, 224);
     border: none;
-    border-radius: 10px;
-    font-family: 'Space Mono', serif;
     color: white;
     padding: 0.5rem;
 }
@@ -76,4 +68,12 @@ button:hover {
 
 .border-radius-15 {
     border-radius: 15px;
+}
+
+.border-radius-10 {
+    border-radius: 10px;
+}
+
+.font-space-mono {
+    font-family: 'Space Mono', serif;
 }

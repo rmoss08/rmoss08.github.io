@@ -63,30 +63,39 @@ const Form = () => {
 
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor="question-input">
-        Ever had a question for AI? Now is your chance to ask! Enter your
-        question below.
-      </label>
-      <textarea
-        id="question-input"
-        rows="5"
-        columns="40"
-        placeholder="Do androids dream of electric sheep?"
-        className="border-radius-15"
-      />
-      <label htmlFor="question-select">
-        Or choose one of the AI's favourite questions to get the ball rolling.
-      </label>
-      <select id="question-select" className="">
-        <option value="No, thanks. I'll ask my own question">
-          No, thanks. I'll ask my own question
-        </option>
-        <option value="Do androids dream of electric sheep">
-          Do androids dream of electric sheep?
-        </option>
-        <option value="Can you boogie">Can you boogie?</option>
-      </select>
-      <button className={styles.ask}>Ask</button>
+      <div className={styles['question-box']}>
+        <label htmlFor="question-input">
+          Ever had a question for AI? Now is your chance to ask! Enter your
+          question below.
+        </label>
+        <textarea
+          id="question-input"
+          rows="5"
+          columns="40"
+          placeholder="Type your question here"
+          className="border-radius-15 font-space-mono"
+        />
+      </div>
+      <div className={styles['question-box']}>
+        <label htmlFor="question-select">
+          Or choose one of the AI's favourite questions to get the ball rolling.
+        </label>
+        <select
+          id="question-select"
+          className="border-radius-10 font-space-mono"
+        >
+          <option value="No, thanks. I'll ask my own question">
+            No, thanks. I'll ask my own question
+          </option>
+          <option value="Do androids dream of electric sheep">
+            Do androids dream of electric sheep?
+          </option>
+          <option value="Can you boogie">Can you boogie?</option>
+        </select>
+      </div>
+      <button className={`border-radius-10 font-space-mono ${styles.ask}`}>
+        Ask
+      </button>
     </form>
   );
 };
