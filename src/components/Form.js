@@ -2,7 +2,8 @@ import { useContext } from 'react';
 import { QuestionListContext } from '../store/question-list-context';
 import styles from './Form.module.css';
 
-const OPENAI_API_KEY = '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';
+// API key updated: 2022-05-18
+const OPENAI_API_KEY = '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';
 
 const Form = () => {
   const questionListCtx = useContext(QuestionListContext);
