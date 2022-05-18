@@ -43,14 +43,9 @@ const Form = () => {
     // const answer = responseData.choices[0].text;
     // const answerFormatted = answer.trim().replace('?', "");
 
-    // const question = {
-    //   prompt: prompt,
-    //   answer: answerFormatted,
-    //   timeStamp: timeStamp
-    // }
     const question = {
-      prompt: 'abc',
-      answer: 'def',
+      prompt: prompt,
+      answer: 'answerFormatted',
       timeStamp: timeStamp
     }
 
