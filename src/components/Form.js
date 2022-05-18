@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { QuestionListContext } from "../store/question-list-context";
+import styles from './Form.module.css';
 
 const OPENAI_API_KEY = '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';
 
@@ -63,7 +64,7 @@ const Form = () => {
         columns='40'
         placeholder="Do androids dream of electric sheep?"
       />
-      <button>Ask</button>
+      <button className={styles.ask}>Ask</button>
     </form>
   );
 };

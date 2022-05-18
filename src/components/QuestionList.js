@@ -1,6 +1,7 @@
 import { useCallback, useContext, useEffect } from 'react';
 import { QuestionListContext } from '../store/question-list-context';
 import Question from './Question';
+import styles from './QuestionList.module.css';
 
 const TEST_LIST = [
   { prompt: '3rd', answer: 'abc', timeStamp: 23 },
@@ -27,7 +28,7 @@ const QuestionList = () => {
     <Question key={question.timeStamp} prompt={question.prompt} answer={question.answer} />
     ));
   
-  return <ul>{questionComponents}</ul>;
+  return <ul className={styles.list}>{questionComponents}</ul>;
 };
 
 export default QuestionList;

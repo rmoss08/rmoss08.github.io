@@ -1,0 +1,15 @@
+.question {
+    background-color:rgb(4, 218, 4);
+    /* background-color: rgb(138, 45, 224); */
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.prompt {
+    color: rgb(138, 45, 224);
+}
+
+.answer {
+    color: white;
+}
