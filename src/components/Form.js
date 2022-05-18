@@ -63,6 +63,7 @@ const Form = () => {
         rows='5'
         columns='40'
         placeholder="Do androids dream of electric sheep?"
+        className="border-radius-15"
       />
       <button className={styles.ask}>Ask</button>
     </form>

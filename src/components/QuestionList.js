@@ -5,8 +5,8 @@ import styles from './QuestionList.module.css';
 
 const TEST_LIST = [
   { prompt: '3rd', answer: 'abc', timeStamp: 23 },
-  { prompt: '1st', answer: 'abc', timeStamp: 1 },
-  { prompt: '2nd', answer: 'abc', timeStamp: 14 },
+  // { prompt: '1st', answer: 'abc', timeStamp: 1 },
+  // { prompt: '2nd', answer: 'abc', timeStamp: 14 },
 ];
 
 const QuestionList = () => {
@@ -25,10 +25,16 @@ const QuestionList = () => {
   });
 
   const questionComponents = sortedQuestionList.map((question) => (
-    <Question key={question.timeStamp} prompt={question.prompt} answer={question.answer} />
-    ));
-  
-  return <ul className={styles.list}>{questionComponents}</ul>;
+    <Question
+      key={question.timeStamp}
+      prompt={question.prompt}
+      answer={question.answer}
+    />
+  ));
+
+  return (
+    <ul className={`border-radius-15 ${styles.list}`}>{questionComponents}</ul>
+  );
 };
 
 export default QuestionList;
