@@ -14,9 +14,9 @@ const QuestionListContextProvider = (props) => {
     setQuestionList(newList);
   };
 
-  const removeQuestion = (removedQuestion) => {
+  const removeQuestion = (id) => {
     const newList = questionList.filter(
-      (question) => question !== removedQuestion
+      (question) => question.timeStamp !== id
     );
     setQuestionList(newList);
   };

@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect } from 'react';
+import { Fragment, useContext, useEffect } from 'react';
 import { QuestionListContext } from '../store/question-list-context';
 import Question from './Question';
 import styles from './QuestionList.module.css';
@@ -12,8 +12,11 @@ const TEST_LIST = [
 const QuestionList = () => {
   const questionListCtx = useContext(QuestionListContext);
 
-  const questionList = TEST_LIST;
-  // const questionList = questionListCtx.questionList;
+  let questionComponents;
+
+  // const questionList = TEST_LIST;
+  const questionList = questionListCtx.questionList;
+
   const sortedQuestionList = questionList.sort((a, b) => {
     if (a.timeStamp > b.timeStamp) {
       return 1;
@@ -24,9 +27,10 @@ const QuestionList = () => {
     }
   });
 
-  const questionComponents = sortedQuestionList.map((question) => (
+  questionComponents = sortedQuestionList.map((question) => (
     <Question
       key={question.timeStamp}
+      id={question.timeStamp}
       prompt={question.prompt}
       answer={question.answer}
     />

@@ -39,13 +39,18 @@ const Form = () => {
     const prompt = event.target[0].value;
     const timeStamp = event.timeStamp;
     
-    const responseData = await fetchOpenaiAPI(prompt);
-    const answer = responseData.choices[0].text;
-    const answerFormatted = answer.trim().replace('?', "");
+    // const responseData = await fetchOpenaiAPI(prompt);
+    // const answer = responseData.choices[0].text;
+    // const answerFormatted = answer.trim().replace('?', "");
 
+    // const question = {
+    //   prompt: prompt,
+    //   answer: answerFormatted,
+    //   timeStamp: timeStamp
+    // }
     const question = {
-      prompt: prompt,
-      answer: answerFormatted,
+      prompt: 'abc',
+      answer: 'def',
       timeStamp: timeStamp
     }
 
