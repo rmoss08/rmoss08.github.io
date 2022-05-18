@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import { QuestionListContext } from "../store/question-list-context";
+
 const OPENAI_API_KEY = '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';
 
 const Form = () => {
+  const questionListCtx = useContext(QuestionListContext);
+
   const fetchOpenaiAPI = async (prompt) => {
     const requestData = {
       prompt: prompt,
@@ -23,20 +28,27 @@ const Form = () => {
       }
     );
     const responseData = await response.json();
-    console.log(responseData);
-
-    const answer = responseData.choices[0].text;
-    const answerFormatted = answer.trim().replace('?', "");
-    console.log(answerFormatted);
-  };
     
+    return responseData;
+  };
+  
   const submitHandler = async (event) => {
     event.preventDefault();
-
+    
     const prompt = event.target[0].value;
     const timeStamp = event.timeStamp;
     
-    fetchOpenaiAPI(prompt);
+    const responseData = fetchOpenaiAPI(prompt);
+    const answer = responseData.choices[0].text;
+    const answerFormatted = answer.trim().replace('?', "");
+
+    const question = {
+      prompt: prompt,
+      answer: answerFormatted,
+      timeStamp: timeStamp
+    }
+
+    questionListCtx.addQuestion(question);
   };
 
   return (
