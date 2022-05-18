@@ -5,7 +5,7 @@ import styles from './Question.module.css';
 const Question = (props) => {
   const questionListCtx = useContext(QuestionListContext);
   
-  const clickHandler = (event) => {
+  const clickHandler = () => {
     questionListCtx.removeQuestion(props.id);
   };
 

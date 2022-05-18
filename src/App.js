@@ -1,8 +1,6 @@
 import Form from './components/Form';
 import QuestionList from './components/QuestionList';
-import QuestionListContextProvider, {
-  QuestionListContext,
-} from './store/question-list-context';
+import QuestionListContextProvider from './store/question-list-context';
 
 function App() {
   return (

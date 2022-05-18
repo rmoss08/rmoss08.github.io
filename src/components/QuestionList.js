@@ -1,4 +1,4 @@
-import { Fragment, useContext, useEffect } from 'react';
+import { Fragment, useContext } from 'react';
 import { QuestionListContext } from '../store/question-list-context';
 import Question from './Question';
 import styles from './QuestionList.module.css';

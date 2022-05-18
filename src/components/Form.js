@@ -48,13 +48,13 @@ const Form = () => {
 
     const timeStamp = event.timeStamp;
 
-    // const responseData = await fetchOpenaiAPI(prompt);
-    // const answer = responseData.choices[0].text;
-    // const answerFormatted = answer.trim().replace('?', "");
+    const responseData = await fetchOpenaiAPI(prompt);
+    const answer = responseData.choices[0].text;
+    const answerFormatted = answer.trim().replace('?', '');
 
     const question = {
       prompt: prompt,
-      answer: 'answerFormatted',
+      answer: answerFormatted,
       timeStamp: timeStamp,
     };
 
@@ -93,7 +93,9 @@ const Form = () => {
           <option value="Can you boogie">Can you boogie?</option>
         </select>
       </div>
-      <button className={`border-radius-10 font-space-mono ${styles.ask}`}>
+      <button
+        className={`border-radius-10 font-space-mono ${styles.ask}`}
+      >
         Ask
       </button>
     </form>
